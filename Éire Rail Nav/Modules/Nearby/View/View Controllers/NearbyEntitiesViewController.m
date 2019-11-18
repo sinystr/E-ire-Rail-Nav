@@ -120,13 +120,24 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     NearbyEntitiesCategoryTableViewCell *headerCell = [self.tableView dequeueReusableCellWithIdentifier:@"NearbyEntitiesCategoryTableViewCell"];
     headerCell.nearbyView = self.nearbyView;
+    
+    if(routesFullListIsShown){
+        headerCell.titleLabel.text = @"All Routes";
+        return headerCell;
+    }
+    
+    if(stationsFullListIsShown){
+        headerCell.titleLabel.text = @"All Stations";
+        headerCell.addButton.hidden = YES;
+        return headerCell;
+    }
 
     switch (section) {
         case 0:
-            headerCell.titleLabel.text = routesFullListIsShown ? @"All Routes" : @"Routes";
+            headerCell.titleLabel.text = @"Routes";
             break;
         default:
-            headerCell.titleLabel.text = stationsFullListIsShown ? @"All Stations" : @"Stations";
+            headerCell.titleLabel.text = @"Stations";
             headerCell.addButton.hidden = YES;
             break;
     }
