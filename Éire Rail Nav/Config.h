@@ -1,0 +1,1 @@
+#define NEARBY_DISTANCE 10000

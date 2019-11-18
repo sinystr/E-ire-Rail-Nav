@@ -3,32 +3,138 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0D617F8B236DB52B00365646 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D617F8A236DB52B00365646 /* AppDelegate.m */; };
 		0D617F8E236DB52B00365646 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D617F8D236DB52B00365646 /* SceneDelegate.m */; };
-		0D617F91236DB52B00365646 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D617F90236DB52B00365646 /* ViewController.m */; };
-		0D617F94236DB52B00365646 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D617F92236DB52B00365646 /* Main.storyboard */; };
 		0D617F96236DB52D00365646 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D617F95236DB52D00365646 /* Assets.xcassets */; };
 		0D617F99236DB52D00365646 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D617F97236DB52D00365646 /* LaunchScreen.storyboard */; };
 		0D617F9C236DB52D00365646 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D617F9B236DB52D00365646 /* main.m */; };
+		0D65AF0C23754EF0002B0ECA /* NearbyRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D65AF0B23754EF0002B0ECA /* NearbyRouter.m */; };
+		0D65AF1623756231002B0ECA /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65AF1523756231002B0ECA /* NearbyViewController.swift */; };
+		0D65AF2023757CF4002B0ECA /* NearbyPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D65AF1F23757CF4002B0ECA /* NearbyPresenter.m */; };
+		0D65AF2323757D11002B0ECA /* NearbyInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D65AF2223757D11002B0ECA /* NearbyInteractor.m */; };
+		0D6A9527237751AB003AA7AD /* NSXMLStationsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A9526237751AB003AA7AD /* NSXMLStationsParser.m */; };
+		0D6A952D237757B3003AA7AD /* StationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A952C237757B3003AA7AD /* StationModel.m */; };
+		0D6A953023779FEC003AA7AD /* EntityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A952F23779FEC003AA7AD /* EntityManager.m */; };
+		0D6A95342377A4ED003AA7AD /* RouteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A95332377A4ED003AA7AD /* RouteModel.m */; };
+		0D8689402375F4EC007715CC /* NearbyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D86893F2375F4EC007715CC /* NearbyViewController.xib */; };
+		0D8689442375F85E007715CC /* NearbyEntitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8689422375F85E007715CC /* NearbyEntitiesViewController.m */; };
+		0D8689452375F85E007715CC /* NearbyEntitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D8689432375F85E007715CC /* NearbyEntitiesViewController.xib */; };
+		0D86894923760D47007715CC /* NearbyEntitiesCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D86894723760D47007715CC /* NearbyEntitiesCategoryTableViewCell.m */; };
+		0D86894A23760D47007715CC /* NearbyEntitiesCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D86894823760D47007715CC /* NearbyEntitiesCategoryTableViewCell.xib */; };
+		0D86894E2376E4C5007715CC /* NearbyEntitiesCategoryFooterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D86894C2376E4C5007715CC /* NearbyEntitiesCategoryFooterTableViewCell.m */; };
+		0D86894F2376E4C5007715CC /* NearbyEntitiesCategoryFooterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D86894D2376E4C5007715CC /* NearbyEntitiesCategoryFooterTableViewCell.xib */; };
+		0DAE40B32372128A004A81CB /* CoreDataIDM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DAE40B22372128A004A81CB /* CoreDataIDM.m */; };
+		0DAE40B723721503004A81CB /* IrishRailRemoteDataAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DAE40B623721503004A81CB /* IrishRailRemoteDataAPI.m */; };
+		0DDB6E75237B2A3800E0D0FF /* NearbyEntityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DDB6E72237B2A3800E0D0FF /* NearbyEntityTableViewCell.xib */; };
+		0DDB6E76237B2A3800E0D0FF /* NearbyEntityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDB6E74237B2A3800E0D0FF /* NearbyEntityTableViewCell.m */; };
+		0DDB6EB3237B2BEC00E0D0FF /* TrainsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDB6EA8237B2BEC00E0D0FF /* TrainsPresenter.m */; };
+		0DDB6EB5237B2BEC00E0D0FF /* TrainsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDB6EAE237B2BEC00E0D0FF /* TrainsInteractor.m */; };
+		0DDB6EB6237B2BEC00E0D0FF /* TrainsRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDB6EB2237B2BEC00E0D0FF /* TrainsRouter.m */; };
+		0DDB6EC8237B308700E0D0FF /* AddRoutePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDB6EC6237B308700E0D0FF /* AddRoutePresenter.m */; };
+		0DDB6ECC237B30C200E0D0FF /* AddRouteInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDB6ECB237B30C200E0D0FF /* AddRouteInteractor.m */; };
+		0DDB6ECF237B30CA00E0D0FF /* AddRouteRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDB6ECD237B30CA00E0D0FF /* AddRouteRouter.m */; };
+		0DDB6ED7237C951200E0D0FF /* AddRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDB6ED6237C951200E0D0FF /* AddRouteViewController.swift */; };
+		0DDB6ED9237C96F300E0D0FF /* AddRouteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DDB6ED8237C96F300E0D0FF /* AddRouteViewController.xib */; };
+		0DE56DF6236F3875000F6B96 /* IrishRailway.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0DE56DF4236F3875000F6B96 /* IrishRailway.xcdatamodeld */; };
+		0DF73422237DAC5E0061224F /* TrainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF73421237DAC5E0061224F /* TrainModel.m */; };
+		6801F84523819861009D290D /* NSXMLTrainsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6801F84123819861009D290D /* NSXMLTrainsParser.m */; };
+		6801F84A2381ADA4009D290D /* NSXMLTrainStopsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6801F8492381ADA4009D290D /* NSXMLTrainStopsParser.m */; };
+		6801F8522381E05A009D290D /* TrainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6801F8502381E05A009D290D /* TrainTableViewCell.m */; };
+		6801F8532381E05A009D290D /* TrainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6801F8512381E05A009D290D /* TrainTableViewCell.xib */; };
+		6804CE752380964C008888BA /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6804CE742380964C008888BA /* LocationManager.m */; };
+		6804CE792380A9A0008888BA /* TrainsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6804CE762380A9A0008888BA /* TrainsViewController.m */; };
+		6804CE7A2380A9A0008888BA /* TrainsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6804CE772380A9A0008888BA /* TrainsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D2C6FB323720DE700069492 /* RemoteDataAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RemoteDataAPI.h; path = ../RemoteDataAPI.h; sourceTree = "<group>"; };
 		0D617F86236DB52B00365646 /* Éire Rail Nav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Éire Rail Nav.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D617F89236DB52B00365646 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0D617F8A236DB52B00365646 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0D617F8C236DB52B00365646 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		0D617F8D236DB52B00365646 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		0D617F8F236DB52B00365646 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0D617F90236DB52B00365646 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		0D617F93236DB52B00365646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D617F95236DB52D00365646 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D617F98236DB52D00365646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D617F9A236DB52D00365646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D617F9B236DB52D00365646 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0D65AF0A23754EF0002B0ECA /* NearbyRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NearbyRouter.h; sourceTree = "<group>"; };
+		0D65AF0B23754EF0002B0ECA /* NearbyRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NearbyRouter.m; sourceTree = "<group>"; };
+		0D65AF1523756231002B0ECA /* NearbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
+		0D65AF1E23757CF4002B0ECA /* NearbyPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NearbyPresenter.h; sourceTree = "<group>"; };
+		0D65AF1F23757CF4002B0ECA /* NearbyPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NearbyPresenter.m; sourceTree = "<group>"; };
+		0D65AF2123757D11002B0ECA /* NearbyInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NearbyInteractor.h; sourceTree = "<group>"; };
+		0D65AF2223757D11002B0ECA /* NearbyInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NearbyInteractor.m; sourceTree = "<group>"; };
+		0D65AF2D2375B409002B0ECA /* Éire Rail Nav-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Éire Rail Nav-Bridging-Header.h"; sourceTree = "<group>"; };
+		0D6A9525237751AB003AA7AD /* NSXMLStationsParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSXMLStationsParser.h; sourceTree = "<group>"; };
+		0D6A9526237751AB003AA7AD /* NSXMLStationsParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSXMLStationsParser.m; sourceTree = "<group>"; };
+		0D6A952923775209003AA7AD /* XMLStationsParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = XMLStationsParser.h; path = ../XMLStationsParser.h; sourceTree = "<group>"; };
+		0D6A952B237757B3003AA7AD /* StationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StationModel.h; sourceTree = "<group>"; };
+		0D6A952C237757B3003AA7AD /* StationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationModel.m; sourceTree = "<group>"; };
+		0D6A952E23779FEC003AA7AD /* EntityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntityManager.h; sourceTree = "<group>"; };
+		0D6A952F23779FEC003AA7AD /* EntityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntityManager.m; sourceTree = "<group>"; };
+		0D6A95322377A4ED003AA7AD /* RouteModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RouteModel.h; sourceTree = "<group>"; };
+		0D6A95332377A4ED003AA7AD /* RouteModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouteModel.m; sourceTree = "<group>"; };
+		0D6A95352377A707003AA7AD /* EntityManagerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EntityManagerProtocol.h; path = ../EntityManagerProtocol.h; sourceTree = "<group>"; };
+		0D86892E2375BB91007715CC /* NearbyModuleProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NearbyModuleProtocols.h; sourceTree = "<group>"; };
+		0D86893F2375F4EC007715CC /* NearbyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NearbyViewController.xib; sourceTree = "<group>"; };
+		0D8689412375F85E007715CC /* NearbyEntitiesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NearbyEntitiesViewController.h; sourceTree = "<group>"; };
+		0D8689422375F85E007715CC /* NearbyEntitiesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NearbyEntitiesViewController.m; sourceTree = "<group>"; };
+		0D8689432375F85E007715CC /* NearbyEntitiesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NearbyEntitiesViewController.xib; path = "../View Controllers/NearbyEntitiesViewController.xib"; sourceTree = "<group>"; };
+		0D86894623760D47007715CC /* NearbyEntitiesCategoryTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NearbyEntitiesCategoryTableViewCell.h; sourceTree = "<group>"; };
+		0D86894723760D47007715CC /* NearbyEntitiesCategoryTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NearbyEntitiesCategoryTableViewCell.m; sourceTree = "<group>"; };
+		0D86894823760D47007715CC /* NearbyEntitiesCategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NearbyEntitiesCategoryTableViewCell.xib; sourceTree = "<group>"; };
+		0D86894B2376E4C5007715CC /* NearbyEntitiesCategoryFooterTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NearbyEntitiesCategoryFooterTableViewCell.h; sourceTree = "<group>"; };
+		0D86894C2376E4C5007715CC /* NearbyEntitiesCategoryFooterTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NearbyEntitiesCategoryFooterTableViewCell.m; sourceTree = "<group>"; };
+		0D86894D2376E4C5007715CC /* NearbyEntitiesCategoryFooterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NearbyEntitiesCategoryFooterTableViewCell.xib; sourceTree = "<group>"; };
+		0DAE40B12372128A004A81CB /* CoreDataIDM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataIDM.h; sourceTree = "<group>"; };
+		0DAE40B22372128A004A81CB /* CoreDataIDM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataIDM.m; sourceTree = "<group>"; };
+		0DAE40B4237212F8004A81CB /* InternalDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = InternalDataManager.h; path = ../InternalDataManager.h; sourceTree = "<group>"; };
+		0DAE40B523721503004A81CB /* IrishRailRemoteDataAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IrishRailRemoteDataAPI.h; sourceTree = "<group>"; };
+		0DAE40B623721503004A81CB /* IrishRailRemoteDataAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IrishRailRemoteDataAPI.m; sourceTree = "<group>"; };
+		0DDB6E72237B2A3800E0D0FF /* NearbyEntityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearbyEntityTableViewCell.xib; sourceTree = "<group>"; };
+		0DDB6E73237B2A3800E0D0FF /* NearbyEntityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyEntityTableViewCell.h; sourceTree = "<group>"; };
+		0DDB6E74237B2A3800E0D0FF /* NearbyEntityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyEntityTableViewCell.m; sourceTree = "<group>"; };
+		0DDB6EA8237B2BEC00E0D0FF /* TrainsPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainsPresenter.m; sourceTree = "<group>"; };
+		0DDB6EA9237B2BEC00E0D0FF /* TrainsPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainsPresenter.h; sourceTree = "<group>"; };
+		0DDB6EAC237B2BEC00E0D0FF /* TrainsModuleProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainsModuleProtocols.h; sourceTree = "<group>"; };
+		0DDB6EAE237B2BEC00E0D0FF /* TrainsInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainsInteractor.m; sourceTree = "<group>"; };
+		0DDB6EAF237B2BEC00E0D0FF /* TrainsInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainsInteractor.h; sourceTree = "<group>"; };
+		0DDB6EB1237B2BEC00E0D0FF /* TrainsRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainsRouter.h; sourceTree = "<group>"; };
+		0DDB6EB2237B2BEC00E0D0FF /* TrainsRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainsRouter.m; sourceTree = "<group>"; };
+		0DDB6EC6237B308700E0D0FF /* AddRoutePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRoutePresenter.m; sourceTree = "<group>"; };
+		0DDB6EC7237B308700E0D0FF /* AddRoutePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRoutePresenter.h; sourceTree = "<group>"; };
+		0DDB6EC9237B309000E0D0FF /* AddRouteModuleProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRouteModuleProtocols.h; sourceTree = "<group>"; };
+		0DDB6ECA237B30C200E0D0FF /* AddRouteInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRouteInteractor.h; sourceTree = "<group>"; };
+		0DDB6ECB237B30C200E0D0FF /* AddRouteInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRouteInteractor.m; sourceTree = "<group>"; };
+		0DDB6ECD237B30CA00E0D0FF /* AddRouteRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRouteRouter.m; sourceTree = "<group>"; };
+		0DDB6ECE237B30CA00E0D0FF /* AddRouteRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRouteRouter.h; sourceTree = "<group>"; };
+		0DDB6ED6237C951200E0D0FF /* AddRouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRouteViewController.swift; sourceTree = "<group>"; };
+		0DDB6ED8237C96F300E0D0FF /* AddRouteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddRouteViewController.xib; sourceTree = "<group>"; };
+		0DE56DF5236F3875000F6B96 /* Rail.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rail.xcdatamodel; sourceTree = "<group>"; };
+		0DF73420237DAC5E0061224F /* TrainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainModel.h; sourceTree = "<group>"; };
+		0DF73421237DAC5E0061224F /* TrainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainModel.m; sourceTree = "<group>"; };
+		60EB05B377727B243C2D32A0 /* Pods_E_ire_Rail_Nav.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_ire_Rail_Nav.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6801F83E2381743E009D290D /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		6801F84123819861009D290D /* NSXMLTrainsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXMLTrainsParser.m; sourceTree = "<group>"; };
+		6801F84223819861009D290D /* NSXMLTrainsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXMLTrainsParser.h; sourceTree = "<group>"; };
+		6801F847238198CE009D290D /* XMLTrainsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLTrainsParser.h; sourceTree = "<group>"; };
+		6801F8482381ADA4009D290D /* NSXMLTrainStopsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXMLTrainStopsParser.h; sourceTree = "<group>"; };
+		6801F8492381ADA4009D290D /* NSXMLTrainStopsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXMLTrainStopsParser.m; sourceTree = "<group>"; };
+		6801F84B2381ADFC009D290D /* XMLTrainStopsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLTrainStopsParser.h; sourceTree = "<group>"; };
+		6801F84F2381E05A009D290D /* TrainTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainTableViewCell.h; sourceTree = "<group>"; };
+		6801F8502381E05A009D290D /* TrainTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainTableViewCell.m; sourceTree = "<group>"; };
+		6801F8512381E05A009D290D /* TrainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainTableViewCell.xib; sourceTree = "<group>"; };
+		6804CE732380964C008888BA /* LocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		6804CE742380964C008888BA /* LocationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		6804CE762380A9A0008888BA /* TrainsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainsViewController.m; sourceTree = "<group>"; };
+		6804CE772380A9A0008888BA /* TrainsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrainsViewController.xib; sourceTree = "<group>"; };
+		6804CE782380A9A0008888BA /* TrainsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainsViewController.h; sourceTree = "<group>"; };
+		951CC051F1BDDDF508F49C44 /* Pods-Éire Rail Nav.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Éire Rail Nav.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Éire Rail Nav/Pods-Éire Rail Nav.debug.xcconfig"; sourceTree = "<group>"; };
+		99F2D06789DAADC6039377DA /* Pods-Éire Rail Nav.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Éire Rail Nav.release.xcconfig"; path = "Pods/Target Support Files/Pods-Éire Rail Nav/Pods-Éire Rail Nav.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,11 +148,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D32F01B237082C5000583A1 /* DataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				0DAE40B12372128A004A81CB /* CoreDataIDM.h */,
+				0DAE40B22372128A004A81CB /* CoreDataIDM.m */,
+				0DAE40B523721503004A81CB /* IrishRailRemoteDataAPI.h */,
+				0DAE40B623721503004A81CB /* IrishRailRemoteDataAPI.m */,
+				0D6A952E23779FEC003AA7AD /* EntityManager.h */,
+				0D6A952F23779FEC003AA7AD /* EntityManager.m */,
+				6804CE732380964C008888BA /* LocationManager.h */,
+				6804CE742380964C008888BA /* LocationManager.m */,
+			);
+			path = DataManagers;
+			sourceTree = "<group>";
+		};
 		0D617F7D236DB52B00365646 = {
 			isa = PBXGroup;
 			children = (
 				0D617F88236DB52B00365646 /* Éire Rail Nav */,
 				0D617F87236DB52B00365646 /* Products */,
+				C77D0198BFFCA87B6B307367 /* Pods */,
+				4C9C51680A26FBE3CE2B0E3B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,19 +184,322 @@
 		0D617F88236DB52B00365646 /* Éire Rail Nav */ = {
 			isa = PBXGroup;
 			children = (
+				0D6A952A23775765003AA7AD /* Models */,
+				0D6A95212377046D003AA7AD /* Parsers */,
+				0D8CE8692372BFF100C9ADA1 /* Modules */,
+				0D32F01B237082C5000583A1 /* DataManagers */,
+				0DE56DF7236F3A6E000F6B96 /* Protocols */,
 				0D617F89236DB52B00365646 /* AppDelegate.h */,
+				6801F83E2381743E009D290D /* Config.h */,
 				0D617F8A236DB52B00365646 /* AppDelegate.m */,
 				0D617F8C236DB52B00365646 /* SceneDelegate.h */,
 				0D617F8D236DB52B00365646 /* SceneDelegate.m */,
-				0D617F8F236DB52B00365646 /* ViewController.h */,
-				0D617F90236DB52B00365646 /* ViewController.m */,
-				0D617F92236DB52B00365646 /* Main.storyboard */,
 				0D617F95236DB52D00365646 /* Assets.xcassets */,
 				0D617F97236DB52D00365646 /* LaunchScreen.storyboard */,
 				0D617F9A236DB52D00365646 /* Info.plist */,
 				0D617F9B236DB52D00365646 /* main.m */,
+				0DE56DF4236F3875000F6B96 /* IrishRailway.xcdatamodeld */,
+				0D65AF2D2375B409002B0ECA /* Éire Rail Nav-Bridging-Header.h */,
 			);
 			path = "Éire Rail Nav";
+			sourceTree = "<group>";
+		};
+		0D65AF13237561A4002B0ECA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0D65AF1523756231002B0ECA /* NearbyViewController.swift */,
+				0D8689412375F85E007715CC /* NearbyEntitiesViewController.h */,
+				0D8689422375F85E007715CC /* NearbyEntitiesViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		0D65AF14237561B0002B0ECA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0D8689392375D8F8007715CC /* Cells */,
+				0D86893F2375F4EC007715CC /* NearbyViewController.xib */,
+				0D8689432375F85E007715CC /* NearbyEntitiesViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0D6A95212377046D003AA7AD /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				6801F8482381ADA4009D290D /* NSXMLTrainStopsParser.h */,
+				6801F8492381ADA4009D290D /* NSXMLTrainStopsParser.m */,
+				6801F84223819861009D290D /* NSXMLTrainsParser.h */,
+				6801F84123819861009D290D /* NSXMLTrainsParser.m */,
+				0D6A9525237751AB003AA7AD /* NSXMLStationsParser.h */,
+				0D6A9526237751AB003AA7AD /* NSXMLStationsParser.m */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+		0D6A952A23775765003AA7AD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0D6A952B237757B3003AA7AD /* StationModel.h */,
+				0D6A952C237757B3003AA7AD /* StationModel.m */,
+				0D6A95322377A4ED003AA7AD /* RouteModel.h */,
+				0D6A95332377A4ED003AA7AD /* RouteModel.m */,
+				0DF73420237DAC5E0061224F /* TrainModel.h */,
+				0DF73421237DAC5E0061224F /* TrainModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0D8689392375D8F8007715CC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0DDB6E73237B2A3800E0D0FF /* NearbyEntityTableViewCell.h */,
+				0DDB6E74237B2A3800E0D0FF /* NearbyEntityTableViewCell.m */,
+				0DDB6E72237B2A3800E0D0FF /* NearbyEntityTableViewCell.xib */,
+				0D86894623760D47007715CC /* NearbyEntitiesCategoryTableViewCell.h */,
+				0D86894723760D47007715CC /* NearbyEntitiesCategoryTableViewCell.m */,
+				0D86894823760D47007715CC /* NearbyEntitiesCategoryTableViewCell.xib */,
+				0D86894B2376E4C5007715CC /* NearbyEntitiesCategoryFooterTableViewCell.h */,
+				0D86894C2376E4C5007715CC /* NearbyEntitiesCategoryFooterTableViewCell.m */,
+				0D86894D2376E4C5007715CC /* NearbyEntitiesCategoryFooterTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0D8CE8692372BFF100C9ADA1 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0DDB6EB7237B2E6800E0D0FF /* AddRoute */,
+				0DDB6EA6237B2BEC00E0D0FF /* Trains */,
+				0D8CE86A2372C0C700C9ADA1 /* Nearby */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		0D8CE86A2372C0C700C9ADA1 /* Nearby */ = {
+			isa = PBXGroup;
+			children = (
+				0D8CE8722372FF8C00C9ADA1 /* Protocols */,
+				0D8CE86E2372C5C200C9ADA1 /* Router */,
+				0D8CE86D2372C12B00C9ADA1 /* View */,
+				0D8CE86C2372C12200C9ADA1 /* Presenter */,
+				0D8CE86B2372C10000C9ADA1 /* Interactor */,
+			);
+			path = Nearby;
+			sourceTree = "<group>";
+		};
+		0D8CE86B2372C10000C9ADA1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0D65AF2123757D11002B0ECA /* NearbyInteractor.h */,
+				0D65AF2223757D11002B0ECA /* NearbyInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		0D8CE86C2372C12200C9ADA1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0D65AF1E23757CF4002B0ECA /* NearbyPresenter.h */,
+				0D65AF1F23757CF4002B0ECA /* NearbyPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0D8CE86D2372C12B00C9ADA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D65AF13237561A4002B0ECA /* View Controllers */,
+				0D65AF14237561B0002B0ECA /* Views */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0D8CE86E2372C5C200C9ADA1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				0D65AF0A23754EF0002B0ECA /* NearbyRouter.h */,
+				0D65AF0B23754EF0002B0ECA /* NearbyRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		0D8CE8722372FF8C00C9ADA1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0D86892E2375BB91007715CC /* NearbyModuleProtocols.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0DDB6EA6237B2BEC00E0D0FF /* Trains */ = {
+			isa = PBXGroup;
+			children = (
+				0DF7341A237D7D8E0061224F /* View */,
+				0DDB6EA7237B2BEC00E0D0FF /* Presenter */,
+				0DDB6EAA237B2BEC00E0D0FF /* Protocols */,
+				0DDB6EAD237B2BEC00E0D0FF /* Interactor */,
+				0DDB6EB0237B2BEC00E0D0FF /* Router */,
+			);
+			path = Trains;
+			sourceTree = "<group>";
+		};
+		0DDB6EA7237B2BEC00E0D0FF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0DDB6EA8237B2BEC00E0D0FF /* TrainsPresenter.m */,
+				0DDB6EA9237B2BEC00E0D0FF /* TrainsPresenter.h */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0DDB6EAA237B2BEC00E0D0FF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0DDB6EAC237B2BEC00E0D0FF /* TrainsModuleProtocols.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0DDB6EAD237B2BEC00E0D0FF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0DDB6EAE237B2BEC00E0D0FF /* TrainsInteractor.m */,
+				0DDB6EAF237B2BEC00E0D0FF /* TrainsInteractor.h */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		0DDB6EB0237B2BEC00E0D0FF /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				0DDB6EB1237B2BEC00E0D0FF /* TrainsRouter.h */,
+				0DDB6EB2237B2BEC00E0D0FF /* TrainsRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		0DDB6EB7237B2E6800E0D0FF /* AddRoute */ = {
+			isa = PBXGroup;
+			children = (
+				0DDB6ED0237BE51500E0D0FF /* Views */,
+				0DDB6EB8237B2E6800E0D0FF /* Presenter */,
+				0DDB6EBB237B2E6800E0D0FF /* Protocols */,
+				0DDB6EBD237B2E6800E0D0FF /* Interactor */,
+				0DDB6EC0237B2E6900E0D0FF /* Router */,
+			);
+			path = AddRoute;
+			sourceTree = "<group>";
+		};
+		0DDB6EB8237B2E6800E0D0FF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0DDB6EC7237B308700E0D0FF /* AddRoutePresenter.h */,
+				0DDB6EC6237B308700E0D0FF /* AddRoutePresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0DDB6EBB237B2E6800E0D0FF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0DDB6EC9237B309000E0D0FF /* AddRouteModuleProtocols.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0DDB6EBD237B2E6800E0D0FF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0DDB6ECA237B30C200E0D0FF /* AddRouteInteractor.h */,
+				0DDB6ECB237B30C200E0D0FF /* AddRouteInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		0DDB6EC0237B2E6900E0D0FF /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				0DDB6ECE237B30CA00E0D0FF /* AddRouteRouter.h */,
+				0DDB6ECD237B30CA00E0D0FF /* AddRouteRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		0DDB6ED0237BE51500E0D0FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0DDB6ED8237C96F300E0D0FF /* AddRouteViewController.xib */,
+				0DDB6ED6237C951200E0D0FF /* AddRouteViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0DE56DF7236F3A6E000F6B96 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6801F84D2381DFD3009D290D /* DataManagers */,
+				6801F84C2381DFC4009D290D /* Parsers */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0DF7341A237D7D8E0061224F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6801F84E2381E02F009D290D /* Cells */,
+				6804CE782380A9A0008888BA /* TrainsViewController.h */,
+				6804CE762380A9A0008888BA /* TrainsViewController.m */,
+				6804CE772380A9A0008888BA /* TrainsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4C9C51680A26FBE3CE2B0E3B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60EB05B377727B243C2D32A0 /* Pods_E_ire_Rail_Nav.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6801F84C2381DFC4009D290D /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				6801F84B2381ADFC009D290D /* XMLTrainStopsParser.h */,
+				6801F847238198CE009D290D /* XMLTrainsParser.h */,
+				0D6A952923775209003AA7AD /* XMLStationsParser.h */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+		6801F84D2381DFD3009D290D /* DataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				0D2C6FB323720DE700069492 /* RemoteDataAPI.h */,
+				0DAE40B4237212F8004A81CB /* InternalDataManager.h */,
+				0D6A95352377A707003AA7AD /* EntityManagerProtocol.h */,
+			);
+			path = DataManagers;
+			sourceTree = "<group>";
+		};
+		6801F84E2381E02F009D290D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6801F84F2381E05A009D290D /* TrainTableViewCell.h */,
+				6801F8502381E05A009D290D /* TrainTableViewCell.m */,
+				6801F8512381E05A009D290D /* TrainTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C77D0198BFFCA87B6B307367 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				951CC051F1BDDDF508F49C44 /* Pods-Éire Rail Nav.debug.xcconfig */,
+				99F2D06789DAADC6039377DA /* Pods-Éire Rail Nav.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +509,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D617F9F236DB52D00365646 /* Build configuration list for PBXNativeTarget "Éire Rail Nav" */;
 			buildPhases = (
+				357F0830AB63E7B3E1BA67FB /* [CP] Check Pods Manifest.lock */,
 				0D617F82236DB52B00365646 /* Sources */,
 				0D617F83236DB52B00365646 /* Frameworks */,
 				0D617F84236DB52B00365646 /* Resources */,
+				46CC7653DD6E1D4CF59D8D1A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -102,11 +530,12 @@
 		0D617F7E236DB52B00365646 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "G. Nikolaev";
 				TargetAttributes = {
 					0D617F85236DB52B00365646 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -133,37 +562,105 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6801F8532381E05A009D290D /* TrainTableViewCell.xib in Resources */,
+				0DDB6E75237B2A3800E0D0FF /* NearbyEntityTableViewCell.xib in Resources */,
 				0D617F99236DB52D00365646 /* LaunchScreen.storyboard in Resources */,
+				0DDB6ED9237C96F300E0D0FF /* AddRouteViewController.xib in Resources */,
+				0D86894A23760D47007715CC /* NearbyEntitiesCategoryTableViewCell.xib in Resources */,
+				0D86894F2376E4C5007715CC /* NearbyEntitiesCategoryFooterTableViewCell.xib in Resources */,
+				6804CE7A2380A9A0008888BA /* TrainsViewController.xib in Resources */,
+				0D8689452375F85E007715CC /* NearbyEntitiesViewController.xib in Resources */,
+				0D8689402375F4EC007715CC /* NearbyViewController.xib in Resources */,
 				0D617F96236DB52D00365646 /* Assets.xcassets in Resources */,
-				0D617F94236DB52B00365646 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		357F0830AB63E7B3E1BA67FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Éire Rail Nav-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46CC7653DD6E1D4CF59D8D1A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Éire Rail Nav/Pods-Éire Rail Nav-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Éire Rail Nav/Pods-Éire Rail Nav-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Éire Rail Nav/Pods-Éire Rail Nav-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0D617F82236DB52B00365646 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D617F91236DB52B00365646 /* ViewController.m in Sources */,
+				0D65AF2323757D11002B0ECA /* NearbyInteractor.m in Sources */,
+				0DDB6EB6237B2BEC00E0D0FF /* TrainsRouter.m in Sources */,
+				0DDB6EC8237B308700E0D0FF /* AddRoutePresenter.m in Sources */,
+				0DDB6EB3237B2BEC00E0D0FF /* TrainsPresenter.m in Sources */,
+				0DDB6EB5237B2BEC00E0D0FF /* TrainsInteractor.m in Sources */,
+				0DAE40B723721503004A81CB /* IrishRailRemoteDataAPI.m in Sources */,
+				6804CE752380964C008888BA /* LocationManager.m in Sources */,
+				0D86894E2376E4C5007715CC /* NearbyEntitiesCategoryFooterTableViewCell.m in Sources */,
+				0D6A9527237751AB003AA7AD /* NSXMLStationsParser.m in Sources */,
+				0D6A95342377A4ED003AA7AD /* RouteModel.m in Sources */,
+				6801F84523819861009D290D /* NSXMLTrainsParser.m in Sources */,
 				0D617F8B236DB52B00365646 /* AppDelegate.m in Sources */,
+				0D6A953023779FEC003AA7AD /* EntityManager.m in Sources */,
+				0D6A952D237757B3003AA7AD /* StationModel.m in Sources */,
+				0DDB6ED7237C951200E0D0FF /* AddRouteViewController.swift in Sources */,
+				6801F84A2381ADA4009D290D /* NSXMLTrainStopsParser.m in Sources */,
+				0DE56DF6236F3875000F6B96 /* IrishRailway.xcdatamodeld in Sources */,
+				0D65AF2023757CF4002B0ECA /* NearbyPresenter.m in Sources */,
+				0D86894923760D47007715CC /* NearbyEntitiesCategoryTableViewCell.m in Sources */,
+				0DAE40B32372128A004A81CB /* CoreDataIDM.m in Sources */,
+				6801F8522381E05A009D290D /* TrainTableViewCell.m in Sources */,
+				0D65AF1623756231002B0ECA /* NearbyViewController.swift in Sources */,
+				6804CE792380A9A0008888BA /* TrainsViewController.m in Sources */,
+				0DDB6ECF237B30CA00E0D0FF /* AddRouteRouter.m in Sources */,
+				0DDB6ECC237B30C200E0D0FF /* AddRouteInteractor.m in Sources */,
+				0D65AF0C23754EF0002B0ECA /* NearbyRouter.m in Sources */,
 				0D617F9C236DB52D00365646 /* main.m in Sources */,
+				0D8689442375F85E007715CC /* NearbyEntitiesViewController.m in Sources */,
 				0D617F8E236DB52B00365646 /* SceneDelegate.m in Sources */,
+				0DF73422237DAC5E0061224F /* TrainModel.m in Sources */,
+				0DDB6E76237B2A3800E0D0FF /* NearbyEntityTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0D617F92236DB52B00365646 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0D617F93236DB52B00365646 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0D617F97236DB52D00365646 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -281,41 +778,55 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		0D617FA0236DB52D00365646 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 951CC051F1BDDDF508F49C44 /* Pods-Éire Rail Nav.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3PTPHQFJV4;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = R44HXHUR8R;
 				INFOPLIST_FILE = "Éire Rail Nav/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.gndev.E-ire-Rail-Nav";
+				PRODUCT_MODULE_NAME = Eire_Rail_Nav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OBJC_BRIDGING_HEADER = "Éire Rail Nav/Éire Rail Nav-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		0D617FA1236DB52D00365646 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99F2D06789DAADC6039377DA /* Pods-Éire Rail Nav.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3PTPHQFJV4;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = R44HXHUR8R;
 				INFOPLIST_FILE = "Éire Rail Nav/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.gndev.E-ire-Rail-Nav";
+				PRODUCT_MODULE_NAME = Eire_Rail_Nav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OBJC_BRIDGING_HEADER = "Éire Rail Nav/Éire Rail Nav-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -341,6 +852,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0DE56DF4236F3875000F6B96 /* IrishRailway.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0DE56DF5236F3875000F6B96 /* Rail.xcdatamodel */,
+			);
+			currentVersion = 0DE56DF5236F3875000F6B96 /* Rail.xcdatamodel */;
+			path = IrishRailway.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0D617F7E236DB52B00365646 /* Project object */;
 }

@@ -6,3 +6,4 @@ xcuserdata/
 .build/
 Carthage/Build/
 *.DS_Store
+Pods/*
