@@ -5,8 +5,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RouteModel : NSObject
 
-@property (atomic, strong) StationModel *fromStation;
-@property (atomic, strong) StationModel *toStation;
+@property (nonatomic, strong) StationModel *fromStation;
+@property (nonatomic, strong) StationModel *toStation;
 @property (nonatomic, readonly) double distance;
 
 @end
