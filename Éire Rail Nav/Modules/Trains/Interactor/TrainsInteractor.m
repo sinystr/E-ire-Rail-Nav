@@ -25,16 +25,22 @@
 
         for (TrainModel *train in trains) {
             dispatch_group_enter(group);
+            // Check if Train is applicable to route
             [[EntityManager sharedInstance] getTrainStops:train.code completionHandler:^(NSArray<NSString *> *_Nullable stops, NSError *_Nullable error) {
-                returnError = error;
+                if(error){
+                    returnError = error;
+                    return;
+                }
+                
                 BOOL initialStopFound = false;
                 for (NSString *stop in stops) {
                     if ([stop isEqualToString:route.fromStation.name]) {
                         initialStopFound = true;
+                        continue;
                     }
 
                     if ([stop isEqualToString:route.toStation.name]) {
-                        if(initialStopFound) {
+                        if (initialStopFound) {
                             @synchronized (returnTrains) {
                                 [returnTrains addObject:train];
                             }
