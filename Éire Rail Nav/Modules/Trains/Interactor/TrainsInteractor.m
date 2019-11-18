@@ -34,7 +34,12 @@
                     }
 
                     if ([stop isEqualToString:route.toStation.name]) {
-                        [returnTrains addObject:train];
+                        if(initialStopFound) {
+                            @synchronized (returnTrains) {
+                                [returnTrains addObject:train];
+                            }
+                        }
+                        break;
                     }
                 }
                 dispatch_group_leave(group);
