@@ -45,11 +45,11 @@
                 if (error != nil) {
                     completionHandler(nil, error);
                 }
-                [weakSelf.coreDataManager saveStations:stations completionHandler:^(NSError *_Nullable err) {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                                       completionHandler(stations, nil);
-                                   });
-                }];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [weakSelf.coreDataManager saveStations:stations completionHandler:^(NSError *_Nullable err) {
+                        completionHandler(stations, nil);
+                    }];
+                });
             }];
         }];
     }];
